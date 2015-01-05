@@ -25,6 +25,7 @@ nav ul li { /* IE Fixes */
 }
 .header-container header .mobile-nav ~ .menus {
   padding: 1em 0;
+  width: 100%;
 }
 .header-container header .mobile-nav ~ .menus ul {
   padding: 0;
