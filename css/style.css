@@ -148,22 +148,6 @@ a {
   padding: 0 1em;
 }
 
-.intro-container {
-  background-image: url(../images/intro.jpg);
-}
-
-section#id1 {
-  background-image: url(../images/nature1.jpeg);
-}
-
-section#id3 {
-  background-image: url(../images/nature3.jpeg);
-}
-
-section#id5 {
-  background-image: url(../images/nature5.jpeg);
-}
-
 /**
  * carousel-specific styles
  */
