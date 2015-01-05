@@ -1,3 +1,6 @@
+.header-container header .logo {
+  font-size: 2em;
+}
 .header-container header .mobile-nav {
   display: none;
 }
@@ -9,7 +12,7 @@
 .header-container header .menus {
   float:right;
 }
-.header-container header .menus div {
+.header-container header .menus li {
   display: inline-block;
   padding: 0px 1em;
 }

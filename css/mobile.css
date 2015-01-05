@@ -10,6 +10,10 @@ nav ul li { /* IE Fixes */
   margin: 0 0.7%;
 }
 
+.header-container header .logo {
+  max-width: 80%;
+  font-size: 1.5em;
+}
 .header-container header .mobile-nav div {
   display: none;
 }
@@ -26,7 +30,6 @@ nav ul li { /* IE Fixes */
   padding: 0;
 }
 .header-container header .mobile-nav.open ~ .menus li {
-  float: none;
   display: block;
 }
 .header-container header .mobile-nav:not(.open) ~ .menus {

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>HTML5 Angular Responsive Layout</title>
+  <meta name"description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- fonts -->
+  <link href="css/vendor/google-open-sans.css" rel="stylesheet">
+  <link href="css/vendor/font-awesome.css" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/vendor/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" media="(max-width: 767px)" href="css/mobile.css" />
+  <link rel="stylesheet" media="(min-width: 768px)" href="css/desktop.css" />
+  <link rel="stylesheet" media="print" href="css/print.css" />
+
+  <!-- javascripts -->
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-app="myApp" ngd-watch-scroll>
+  <!--[if lt IE 7]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+  <![endif]-->
+  <div class="header-container pos-fixed w-100 align-top half-scrolled">
+    <div ng-include="'header.html'"></div>
+  </div>
+
+  <div class="main-container bg-white">
+    <header class="vh-50">
+      <div class="wrapper">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1>Using CSS3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+      </div>
+    </header>
+
+    <section id="id3" class="bg-cover vh-50">
+    </section>
+
+    <section class="vh-50">
+      <div class="wrapper">
+        <h2>Using CSS3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer ng-include="'footer.html'">
+  </footer>
+
+  <script src="js/vendor/angular.js"></script>
+  <script src="js/vendor/angular-touch.js"></script>
+  <script src="js/my-app.js"></script>
+  <script src="js/vendor/google-analytics.js"></script>
+</body>
+
+</html>

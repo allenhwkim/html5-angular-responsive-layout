@@ -72,6 +72,8 @@ a {
 /* ---- width/height ---- */
 .h-100 { height: 100%; }
 .w-100 { width: 100%; }
+.w-75 { width: 75%; }
+.w-50 { width: 50%; }
 .vw-100 { width: 100vw; } /* viewport height: 100% */
 .vw-50  { width: 50vw; } /* viewport height: 100% */
 .vh-100 { height: 100vh; } /* viewport width: 100% */
@@ -82,7 +84,8 @@ a {
 .pos-relative { position: relative; }
 .pos-fixed    { position: fixed; } /* fixed to window, not to document */
 .align-bottom { z-index: -1; } /* on the bottom of stack */
-.align-top    { z-index: 3000; } /* on the top of stack */
+.align-top { z-index: 3000; } /* on the top of stack */
+.pos-fixed.align-top { z-index: 3001; } /* on the top of stack */
 
 /* ---- background ---- */
 .bg-cover { background-position: center center; background-repeat: no-repeat; background-size: cover; }
@@ -91,9 +94,11 @@ a {
 /* ---- text ---- */
 .txt-white { color: #fff; }
 .txt-shadow { text-shadow: 0px 1px 1px #333; }
+.txt-center { text-align: center; }
 
 /* ---- NOs ---- */
 .no-overflow { overflow: hidden; }
+.no-style { list-style: none; }
 
 /* ---- clear float ---- */
 .clearfix:before, .clearfix:after { content: " "; display: table; }
@@ -124,10 +129,15 @@ a {
 
 .header-container.half-scrolled {
   background: #fff;
-  color: #333;
   border-bottom: 1px solid #ccc;
 }
 
+.header-container.half-scrolled,
+.header-container.half-scrolled a {
+  color: #333;
+}
+
+.header-container:not(.half-scrolled),
 .header-container:not(.half-scrolled) a {
   color: #fff;
 }
@@ -139,15 +149,19 @@ a {
 }
 
 .intro-container {
-  background-image: url(../images/nature1.jpeg);
+  background-image: url(../images/intro.jpg);
 }
 
 section#id1 {
-  background-image: url(../images/nature2.jpeg);
+  background-image: url(../images/nature1.jpeg);
 }
 
 section#id3 {
   background-image: url(../images/nature3.jpeg);
+}
+
+section#id5 {
+  background-image: url(../images/nature5.jpeg);
 }
 
 /**
