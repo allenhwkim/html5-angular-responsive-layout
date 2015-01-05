@@ -105,23 +105,74 @@ a {
 .clearfix:after { clear: both; }
 
 /* ---- flexbox layout ---- */
-.flex-vertical { flex-direction: column; }
-.flex-h-start, .flex-h-left { display:flex; justify-content: flex-start}
-.flex-h-end, .flex-h-right {display:flex; justify-content: flex-end}
-.flex-h-center {display:flex; justify-content: center}
-.flex-h-space-between {display:flex; justify-content: space-between}
-.flex-h-space-around {display:flex; justify-content: space-around}
-.flex-v-start, .flex-v-top {display:flex; align-items: flex-start}
-.flex-v-end, .flex-v-bottom {display:flex; align-items: flex-end}
-.flex-v-center {display:flex; align-items: center}
-.flex-v-space-between {display:flex; align-content: space-between}
-.flex-v-space-around {display:flex; align-content: space-around}
+.flex-vertical { 
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.flex-h-start, .flex-h-left { 
+  display:flex;
+  display:-webkit-flex;
+  justify-content:flex-start;
+  -webkit-justify-content: flex-start;
+}
+.flex-h-end, .flex-h-right {
+  display:flex;
+  display:-webkit-flex;
+ -webkit-justify-content: flex-end;
+ justify-content: flex-end;
+}
+.flex-h-center {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.flex-h-space-between {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.flex-h-space-around {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.flex-v-start, .flex-v-top {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.flex-v-end, .flex-v-bottom {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.flex-v-center {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex-v-space-between {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-align-content: space-between;
+  align-content: space-between;
+}
+.flex-v-space-around {
+  display:flex;
+  display:-webkit-flex;
+  -webkit-align-content: space-around;
+  align-content: space-around;
+}
 
 /**
  *  business-specific styles
- */
-.wrapper {
-  width: 90%;
+ */ .wrapper { width: 90%;
   max-width: 1162px;
   margin: 0 auto;
   padding: 1em 5% 1em 5%;
