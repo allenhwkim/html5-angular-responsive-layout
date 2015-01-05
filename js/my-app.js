@@ -15,7 +15,6 @@ app.directive('ngdCarousel', function() {
     scope: {}, // isolated scope
     transclude: true,
     controller: function($scope) {
-      console.log('$scope', $scope)
       this.totalSlides;
       this.curSlide;
       this.slidesEl;
@@ -62,7 +61,6 @@ app.directive('ngdCarouselSlides', function() {
       controller.slidesEl = container;
       controller.totalSlides = totalSlides;
       controller.curSlide = curSlide;
-      console.log('curSlide', curSlide);
     }
   }
 });

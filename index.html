@@ -34,17 +34,15 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
   <![endif]-->
-  <div class="header-container fixed full-vw top-stacked" ng-class="{'half-scrolled': scrollRate>0.5}">
-    <header class="wrapper">
-      <div class="pull-left">
+  <div class="header-container pos-fixed w-100 align-top" ng-class="{'half-scrolled': scrollRate>0.5}">
+    <header class="wrapper clearfix">
+      <div class="pull-left" style="height: 100%">
         <a href=""><b>Site Name</b></a>
       </div>
-      <div class="mobile-nav pull-right" 
-        ng-click="navOpen = !navOpen"  ng-class="{'open' : navOpen}">
+      <div class="mobile-nav pull-right" ng-click="navOpen = !navOpen"  ng-class="{'open' : navOpen}">
         <div class="bars"><i class="fa fa-2x fa-bars"></i></div>
         <div class="close"><i class="fa fa-2x fa-close"></i></div>
       </div>
-      <br class="clearfix"/>
       <nav class="menus flex-h-center">
         <ul>
           <li class="pull-left"><a href="#">Nav ul li a</a></li>
@@ -55,7 +53,7 @@
     </header>
   </div>
 
-  <div class="intro-container full-bg text-white flex-vertical fixed full-vw full-vh flex-h-center bottom-stacked">
+  <div class="intro-container bg-cover txt-white flex-vertical pos-fixed w-100 vh-100 flex-h-center align-bottom">
     <section class="flex-h-center flex-v-center" style="flex:1">
       <div>
         Intro. <br> 
@@ -66,53 +64,53 @@
       <i class="fa fa-chevron-down fa-2x"></i>
     </section>
   </div>
-  <div class="full-vw full-vh"><!-- filler for intro-container --></div>
+  <div class="w-100 vh-100"><!-- filler for intro-container --></div>
 
   <div class="main-container bg-white">
-    <header class="half-vh">
+    <header class="vh-50">
       <div class="wrapper">
         <h1>article header h1</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
       </div>
     </header>
-    <section class="half-vh">
-      <div ngd-carousel class="pos-relative no-overflow full-height">
+    <section class="vh-50">
+      <div ngd-carousel class="pos-relative no-overflow h-100">
       
-        <nav class="pos-absolute top-stacked full-width full-height flex-v-center flex-h-space-between text-white"
+        <nav class="pos-absolute align-top w-100 h-100 flex-v-center flex-h-space-between txt-white"
           ng-swipe-right="showPrev()" ng-swipe-left="showNext()">
           <div class="pull-left margin-1em" ng-click="showPrev()">
-            <i ng-hide="is1stSlide()" class="fa fa-4x fa-caret-left"></i>
+            <i ng-hide="is1stSlide()" class="fa fa-3x fa-chevron-left"></i>
           </div>
           <div class="pull-right margin-1em" ng-click="showNext()">
-            <i ng-hide="isLastSlide()" class="fa fa-4x fa-caret-right"></i>
+            <i ng-hide="isLastSlide()" class="fa fa-3x fa-chevron-right"></i>
           </div>
         </nav>
         
-        <div ngd-carousel-slides slide="1" class="clearfix full-height">
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel1.jpg)"></div>
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel2.jpg)"></div>
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel3.jpg)"></div>
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel4.jpg)"></div>
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel5.jpg)"></div>
-          <div class="pull-left full-height full-bg" style="background-image:url(images/carousel6.jpg)"></div>
+        <div ngd-carousel-slides slide="1" class="clearfix h-100">
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel1.jpg)"></div>
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel2.jpg)"></div>
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel3.jpg)"></div>
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel4.jpg)"></div>
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel5.jpg)"></div>
+          <div class="pull-left h-100 bg-cover" style="background-image:url(images/carousel6.jpg)"></div>
         </div>
         
       </section>
     </section>
-    <section id="id2" class="half-vh">
+    <section id="id2" class="vh-50">
       <div class="wrapper">
         <h2>article header h2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
     </div>
     </section>
 
-    <section id="id3" class="full-bg half-vh">
+    <section id="id3" class="bg-cover vh-50">
       <div class="wrapper">
         <h2>article header h2</h2>
       </div>
     </section>
 
-    <section id="id4" class="clearfix half-vh">
+    <section id="id4" class="clearfix vh-50">
       <div class="wrapper">
         <h2>article header h2</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
