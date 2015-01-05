@@ -1,0 +1,34 @@
+body {
+  font-size: 12px;
+}
+
+nav ul li { /* IE Fixes */
+  display: inline;
+}
+
+.oldie nav a { /* IE fixes */
+  margin: 0 0.7%;
+}
+
+.header-container header .mobile-nav div {
+  display: none;
+}
+.header-container header .mobile-nav.open .close{
+  display: block;
+}
+.header-container header .mobile-nav:not(.open) .bars{
+  display: block;
+}
+.header-container header .mobile-nav ~ .menus {
+  padding: 1em 0;
+}
+.header-container header .mobile-nav ~ .menus ul {
+  padding: 0;
+}
+.header-container header .mobile-nav.open ~ .menus li {
+  float: none;
+  display: block;
+}
+.header-container header .mobile-nav:not(.open) ~ .menus {
+  display: none;
+}

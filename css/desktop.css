@@ -1,0 +1,15 @@
+.header-container header .mobile-nav {
+  display: none;
+}
+
+.header-container header {
+  background: transparent;
+  color: #fff;
+}
+.header-container header .menus {
+  float:right;
+}
+.header-container header .menus div {
+  display: inline-block;
+  padding: 0px 1em;
+}
