@@ -10,6 +10,17 @@ app.directive("ngdWatchScroll", function ($window) {
   };
 });
 
+app.directive("ngdBg", function ($window) {
+  return function(scope, element, attrs) {
+    var screenWidth=angular.element($window)[0].screen.availWidth;
+    var url = attrs.ngdBg;
+    if (screenWidth > 767 && attrs.ngdBgMd) { 
+      url = attrs.ngdBgMd;
+    }
+    element.css('backgroundImage', "url("+url+")");
+  };
+});
+
 app.directive('ngdCarousel', function() {
   return {
     scope: {}, // isolated scope

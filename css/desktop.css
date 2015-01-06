@@ -18,18 +18,18 @@
 }
 
 .intro-container {
-  background-image: url(../images/intro.jpg);
+  background-image: url(../images/intro-md.jpg);
 }
 
 section#id1 {
-  background-image: url(../images/nature1.jpeg);
+  background-image: url(../images/nature1-md.jpeg);
 }
 
 section#id3 {
-  background-image: url(../images/nature3.jpeg);
+  background-image: url(../images/nature3-md.jpeg);
 }
 
 section#id5 {
-  background-image: url(../images/nature5.jpeg);
+  background-image: url(../images/nature5-md.jpeg);
 }
 

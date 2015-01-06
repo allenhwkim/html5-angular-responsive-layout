@@ -38,18 +38,18 @@ nav ul li { /* IE Fixes */
 }
 
 .intro-container {
-  background-image: url(../images/intro-mobile.jpg);
+  background-image: url(../images/intro.jpg);
 }
 
 section#id1 {
-  background-image: url(../images/nature1-mobile.jpeg);
+  background-image: url(../images/nature1.jpeg);
 }
 
 section#id3 {
-  background-image: url(../images/nature3-mobile.jpeg);
+  background-image: url(../images/nature3.jpeg);
 }
 
 section#id5 {
-  background-image: url(../images/nature5-mobile.jpeg);
+  background-image: url(../images/nature5.jpeg);
 }
 
