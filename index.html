@@ -34,11 +34,11 @@
       Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
     </p>
   <![endif]-->
-  <div class="header-container pos-fixed w-100 align-top" ng-class="{'half-scrolled': scrollRate>0.5}">
+  <div class="header-container pos-fixed w-100 align-top" ng-class="{'half-scrolled': winTop/winHeight > 0.5}">
     <div ng-include="'header.html'"></div>
   </div>
 
-  <div class="intro-container bg-cover txt-white flex-vertical pos-fixed w-100 vh-100 flex-h-center align-bottom">
+  <article class="intro-container bg-cover txt-white flex-vertical pos-fixed w-100 vh-100 flex-h-center align-bottom">
     <section class="flex-h-center flex-v-center" style="flex:1">
       <div class="wrapper txt-center" >
         <h3>
@@ -57,14 +57,15 @@
     <section class="flex-h-center clearfix">
       <i class="fa fa-chevron-down fa-2x"></i>
     </section>
-  </div>
+  </article>
   <div class="w-100 vh-100"><!-- filler for intro-container --></div>
 
-  <div class="main-container bg-white">
+  <article class="main-container bg-white">
     <header class="vh-50">
       <div class="wrapper">
         <h1>Mobile Ready</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+        <a href="mobile-ready.html">More</a> 
       </div>
     </header>
 
@@ -97,6 +98,7 @@
       <div class="wrapper">
         <h2>Using CSS3</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+        <a href="using-css3.html">More</a> 
     </div>
     </section>
 
@@ -107,9 +109,18 @@
       <div class="wrapper">
         <h2>Custom Classes</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+        <a href="custom-classes.html">More</a> 
       </div>
     </section>
-  </div>
+  </article>
+
+  <article class="bg-white" ngd-scroll="page<<page>>.json">
+    <section id="template" class="clearfix vh-50">
+      <div class="wrapper">
+        <h1>{{foo}} {{bar}}</h1>
+      </div>
+    </section>
+  </article>
   
   <footer>
     <div class="wrapper clearfix">
