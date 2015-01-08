@@ -13,41 +13,47 @@ app.directive("ngdWatchScroll", function ($window) {
   };
 });
 
-app.directive("ngdScroll", function($window, $http) {
+app.directive("ngdScroll", function($window, $http, $compile, $timeout) {
   return {
-    scope: {}, // isolated scope
     controller: function($scope, $element, $attrs, $compile, $timeout) {
-      this.templateHtml = $element[0].querySelector("#template").outerHTML;
-      this.loadingEl = $element[0].querySelector("#loading");
-      !this.templateHtml && console.log("missing template");
-      this.lastPage = 0;
+      this.lastPage = 0, this.loading = false, this.erred=false;
+      this.templateEl = $element[0].querySelector("#template").cloneNode(true);
+      this.loadingEl  = $element[0].querySelector("#loading").cloneNode(true);
+      this.setLoading = function(loading) {
+        var method = loading ? "appendChild" : "removeChild";
+        $element[0][method](this.loadingEl);
+        this.loading = loading;
+      };
       this.loadMore = function() {
-        $scope.scrollLoading = true;
-        $scope.$apply();
-        var url = $attrs.ngdScroll.replace(/<<page>>/, ++this.lastPage);
+        this.setLoading(true);
+        var url = "page"+(++this.lastPage)+".json";
         var _this = this;
         $http.get(url).then(function(result) {
           $timeout(function() {
             for (var i=0; i<result.data.length; i++) {
               $scope.foo = result.data[i].foo;
-              $scope.bar = result.data[i].bar;
-              var linkFn = $compile(angular.element(_this.templateHtml));
-              var compiledEl = linkFn($scope);
+              var el = $compile(_this.templateEl)($scope);
               $scope.$apply(); 
-              $element[0].insertBefore(compiledEl.clone()[0], _this.loading);
-            };
-            $scope.scrollLoading = false;
+              $element.append(el.clone()[0]);
+            }
           });
-        })
+          _this.setLoading(false);
+        }, function(e) { 
+          _this.erred = true;
+          _this.setLoading(false); 
+        });
       };
     }, // controller
-    link: function(scope, element, attrs, controller) {
+    link: function(scope, element, attrs, ctrl) {
+      while (element[0].firstChild) {
+        element[0].removeChild(element[0].firstChild);
+      }
       angular.element($window).bind("scroll", function() {
-        if (!scope.scrollLoading) { //do not load if already doing
+        if (!ctrl.erred && !ctrl.loading) { //do not load if already doing
           var winBottom = $window.pageYOffset + $window.innerHeight;
           var docHeight = $window.document.body.scrollHeight;
           if (winBottom + 50 > docHeight) { // close to bottom
-            controller.loadMore();
+            ctrl.loadMore();
           }
         }
       });
